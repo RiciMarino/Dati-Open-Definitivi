@@ -510,8 +510,7 @@ tr.soft-deadline:hover td:first-child::before{
 <input checked="" id="printInclude2" style="accent-color:var(--c-primary)" type="checkbox"/> includi Tabella "non soddisfa"
             </label>
 <label class="d-flex align-items-center gap-1" style="font-size:.85rem;cursor:pointer">
-<input checked="" id="printInclude3" style="accent-color:var(--c-primary)" type="checkbox"/> includi Tabella "non previsti"
-            </label>
+</label>
 <button class="btn-primary-custom" id="btnPrint">🖨 Stampa PDF</button>
 </div>
 </div>
@@ -525,9 +524,7 @@ tr.soft-deadline:hover td:first-child::before{
 <button class="status-tab" data-target="pane-nomin">
 <span class="dot dot-warn"></span> non soddisfa c.u. <span class="count-badge" id="countNomin">0</span>
 </button>
-<button class="status-tab" data-target="pane-nonprev">
-<span class="dot dot-dark"></span> Non previsto ai nazionali <span class="count-badge" id="countNonprev">0</span>
-</button>
+
 <button class="status-tab" data-target="pane-all">
 <span class="dot" style="background: var(--c-accent);"></span> Mostra i dati insieme
        </button>
@@ -552,15 +549,7 @@ tr.soft-deadline:hover td:first-child::before{
 </table>
 </div>
 </div>
-<div class="tab-pane" id="pane-nonprev">
-<div style="overflow-x:auto">
-<table class="table table-striped table-hover align-middle w-100" id="table-nonprev">
-<thead><tr>
-<th>Disciplina</th><th>Categoria</th><th>Regione</th><th>Comitato</th><th>Squadre</th><th>Note</th>
-</tr></thead>
-</table>
-</div>
-</div>
+
 <div class="tab-pane" id="pane-all">
 <div class="mb-4">
 <h3 style="font-family:var(--font-display);color:var(--c-primary);font-size:1.05rem;margin:0 0 .75rem">
@@ -586,18 +575,7 @@ tr.soft-deadline:hover td:first-child::before{
 </table>
 </div>
 </div>
-<div>
-<h3 style="font-family:var(--font-display);color:var(--c-dark);font-size:1.05rem;margin:0 0 .75rem">
-      Tabella 3 — Campionati che NON sono previsti ai Campionati nazionali
-    </h3>
-<div style="overflow-x:auto">
-<table class="table table-striped table-hover align-middle w-100" id="table-nonprev-all">
-<thead><tr>
-<th>Disciplina</th><th>Categoria</th><th>Regione</th><th>Comitato</th><th>Squadre</th><th>Note</th>
-</tr></thead>
-</table>
-</div>
-</div>
+
 </div>
 </div>
 <div class="text-center mt-4 no-print" style="color:var(--c-muted);font-size:.78rem">
@@ -643,7 +621,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Misto",
     "Regione": "Abruzzo",
     "Comitato": "L’Aquila",
-    "Squadre": 6,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -652,7 +630,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Abruzzo",
     "Comitato": "Lanciano-Ortona",
-    "Squadre": 8,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -661,7 +639,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Abruzzo",
     "Comitato": "Teramo",
-    "Squadre": 26,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -670,7 +648,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Abruzzo",
     "Comitato": "Teramo",
-    "Squadre": 10,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -679,7 +657,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Abruzzo",
     "Comitato": "Teramo",
-    "Squadre": 39,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -688,7 +666,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Misto",
     "Regione": "Abruzzo",
     "Comitato": "Teramo",
-    "Squadre": 7,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -697,7 +675,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Misto",
     "Regione": "Basilicata",
     "Comitato": "Matera",
-    "Squadre": 6,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -706,7 +684,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Basilicata",
     "Comitato": "Melfi",
-    "Squadre": 20,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -715,7 +693,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Basilicata",
     "Comitato": "Potenza",
-    "Squadre": 8,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -724,16 +702,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Femminile",
     "Regione": "Basilicata",
     "Comitato": "Potenza",
-    "Squadre": 6,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Pallavolo",
-    "categoria": "Open Misto",
-    "Regione": "Basilicata",
-    "Comitato": "Potenza",
-    "Squadre": 5,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -742,7 +711,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Calabria",
     "Comitato": "Catanzaro",
-    "Squadre": 6,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -751,7 +720,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Calabria",
     "Comitato": "Reggio Calabria",
-    "Squadre": 9,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -760,7 +729,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Calabria",
     "Comitato": "Reggio Calabria",
-    "Squadre": 25,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -769,25 +738,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Femminile",
     "Regione": "Calabria",
     "Comitato": "Reggio Calabria",
-    "Squadre": 6,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Pallavolo",
-    "categoria": "Open Maschile",
-    "Regione": "Calabria",
-    "Comitato": "Reggio Calabria",
-    "Squadre": 5,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Pallavolo",
-    "categoria": "Open Misto",
-    "Regione": "Calabria",
-    "Comitato": "Reggio Calabria",
-    "Squadre": 6,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -796,7 +747,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Calabria",
     "Comitato": "Tirrenico",
-    "Squadre": 6,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -805,7 +756,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Campania",
     "Comitato": "Benevento",
-    "Squadre": 5,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -814,7 +765,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Campania",
     "Comitato": "Caserta",
-    "Squadre": 11,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -823,16 +774,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open F",
     "Regione": "Campania",
     "Comitato": "Caserta",
-    "Squadre": 8,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Calcio a Cinque",
-    "categoria": "Open M",
-    "Regione": "Campania",
-    "Comitato": "Caserta",
-    "Squadre": 18,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -841,25 +783,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Femminile",
     "Regione": "Campania",
     "Comitato": "Caserta",
-    "Squadre": 7,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Pallavolo",
-    "categoria": "Open Maschile",
-    "Regione": "Campania",
-    "Comitato": "Caserta",
-    "Squadre": 5,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Pallavolo",
-    "categoria": "Open Misto",
-    "Regione": "Campania",
-    "Comitato": "Caserta",
-    "Squadre": 7,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -868,7 +792,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Campania",
     "Comitato": "Cava Dei Tirreni",
-    "Squadre": 13,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -877,25 +801,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Femminile",
     "Regione": "Campania",
     "Comitato": "Cava Dei Tirreni",
-    "Squadre": 12,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Pallavolo",
-    "categoria": "Open Maschile",
-    "Regione": "Campania",
-    "Comitato": "Cava Dei Tirreni",
-    "Squadre": 12,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Pallavolo",
-    "categoria": "Open Misto",
-    "Regione": "Campania",
-    "Comitato": "Cava Dei Tirreni",
-    "Squadre": 9,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -904,7 +810,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Campania",
     "Comitato": "Napoli",
-    "Squadre": 8,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -913,25 +819,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Femminile",
     "Regione": "Campania",
     "Comitato": "Napoli",
-    "Squadre": 5,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Pallavolo",
-    "categoria": "Open Maschile",
-    "Regione": "Campania",
-    "Comitato": "Napoli",
-    "Squadre": 6,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Pallavolo",
-    "categoria": "Open Misto",
-    "Regione": "Campania",
-    "Comitato": "Napoli",
-    "Squadre": 12,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -940,7 +828,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Campania",
     "Comitato": "Salerno",
-    "Squadre": 13,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -949,7 +837,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Emilia-Romagna",
     "Comitato": "Bologna",
-    "Squadre": 14,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -958,7 +846,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Emilia-Romagna",
     "Comitato": "Bologna",
-    "Squadre": 8,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -967,7 +855,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Emilia-Romagna",
     "Comitato": "Bologna",
-    "Squadre": 16,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -976,16 +864,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open F",
     "Regione": "Emilia-Romagna",
     "Comitato": "Bologna",
-    "Squadre": 9,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Pallacanestro",
-    "categoria": "Open M",
-    "Regione": "Emilia-Romagna",
-    "Comitato": "Bologna",
-    "Squadre": 10,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -994,25 +873,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Femminile",
     "Regione": "Emilia-Romagna",
     "Comitato": "Bologna",
-    "Squadre": 16,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Pallavolo",
-    "categoria": "Open Maschile",
-    "Regione": "Emilia-Romagna",
-    "Comitato": "Bologna",
-    "Squadre": 8,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Pallavolo",
-    "categoria": "Open Misto",
-    "Regione": "Emilia-Romagna",
-    "Comitato": "Bologna",
-    "Squadre": 45,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1021,7 +882,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Emilia-Romagna",
     "Comitato": "Carpi",
-    "Squadre": 29,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1030,7 +891,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Emilia-Romagna",
     "Comitato": "Cesena",
-    "Squadre": 37,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1039,7 +900,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Emilia-Romagna",
     "Comitato": "Cesena",
-    "Squadre": 13,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1048,7 +909,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Emilia-Romagna",
     "Comitato": "Emilia Romagna",
-    "Squadre": 6,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1057,7 +918,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Emilia-Romagna",
     "Comitato": "Emilia Romagna",
-    "Squadre": 8,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1066,16 +927,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Emilia-Romagna",
     "Comitato": "Emilia Romagna",
-    "Squadre": 8,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Pallavolo",
-    "categoria": "Open Misto",
-    "Regione": "Emilia-Romagna",
-    "Comitato": "Emilia Romagna",
-    "Squadre": 1,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1084,7 +936,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Emilia-Romagna",
     "Comitato": "Faenza",
-    "Squadre": 16,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1093,7 +945,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Emilia-Romagna",
     "Comitato": "Faenza",
-    "Squadre": 32,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1102,7 +954,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Femminile",
     "Regione": "Emilia-Romagna",
     "Comitato": "Faenza",
-    "Squadre": 24,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1111,7 +963,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Emilia-Romagna",
     "Comitato": "Ferrara",
-    "Squadre": 15,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1120,7 +972,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Emilia-Romagna",
     "Comitato": "Ferrara",
-    "Squadre": 10,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1129,7 +981,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Emilia-Romagna",
     "Comitato": "Ferrara",
-    "Squadre": 20,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1138,16 +990,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open F",
     "Regione": "Emilia-Romagna",
     "Comitato": "Forli",
-    "Squadre": 16,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Calcio a Cinque",
-    "categoria": "Open M",
-    "Regione": "Emilia-Romagna",
-    "Comitato": "Forli",
-    "Squadre": 9,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1156,7 +999,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Emilia-Romagna",
     "Comitato": "Forli",
-    "Squadre": 40,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1165,16 +1008,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Femminile",
     "Regione": "Emilia-Romagna",
     "Comitato": "Forli",
-    "Squadre": 7,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Pallavolo",
-    "categoria": "Open Misto",
-    "Regione": "Emilia-Romagna",
-    "Comitato": "Forli",
-    "Squadre": 16,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1183,7 +1017,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Emilia-Romagna",
     "Comitato": "Imola",
-    "Squadre": 14,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1192,7 +1026,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Emilia-Romagna",
     "Comitato": "Imola",
-    "Squadre": 8,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1201,7 +1035,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Emilia-Romagna",
     "Comitato": "Imola",
-    "Squadre": 22,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1210,7 +1044,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Emilia-Romagna",
     "Comitato": "Modena",
-    "Squadre": 46,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1219,7 +1053,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Emilia-Romagna",
     "Comitato": "Modena",
-    "Squadre": 98,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1228,7 +1062,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Emilia-Romagna",
     "Comitato": "Modena",
-    "Squadre": 9,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1237,25 +1071,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Femminile",
     "Regione": "Emilia-Romagna",
     "Comitato": "Modena",
-    "Squadre": 12,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Pallavolo",
-    "categoria": "Open Maschile",
-    "Regione": "Emilia-Romagna",
-    "Comitato": "Modena",
-    "Squadre": 7,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Pallavolo",
-    "categoria": "Open Misto",
-    "Regione": "Emilia-Romagna",
-    "Comitato": "Modena",
-    "Squadre": 34,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1264,7 +1080,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Emilia-Romagna",
     "Comitato": "Parma",
-    "Squadre": 38,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1273,7 +1089,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Emilia-Romagna",
     "Comitato": "Parma",
-    "Squadre": 24,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1282,7 +1098,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Emilia-Romagna",
     "Comitato": "Piacenza",
-    "Squadre": 11,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1291,7 +1107,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Emilia-Romagna",
     "Comitato": "Piacenza",
-    "Squadre": 9,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1300,7 +1116,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Emilia-Romagna",
     "Comitato": "Ravenna",
-    "Squadre": 13,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1309,16 +1125,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Maschile",
     "Regione": "Emilia-Romagna",
     "Comitato": "Ravenna",
-    "Squadre": 11,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Pallavolo",
-    "categoria": "Open Misto",
-    "Regione": "Emilia-Romagna",
-    "Comitato": "Ravenna",
-    "Squadre": 13,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1327,7 +1134,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Emilia-Romagna",
     "Comitato": "Reggio Emilia",
-    "Squadre": 46,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1336,16 +1143,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open F",
     "Regione": "Emilia-Romagna",
     "Comitato": "Reggio Emilia",
-    "Squadre": 14,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Calcio a Cinque",
-    "categoria": "Open M",
-    "Regione": "Emilia-Romagna",
-    "Comitato": "Reggio Emilia",
-    "Squadre": 61,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1354,7 +1152,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Emilia-Romagna",
     "Comitato": "Reggio Emilia",
-    "Squadre": 98,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1363,7 +1161,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Emilia-Romagna",
     "Comitato": "Reggio Emilia",
-    "Squadre": 48,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1372,7 +1170,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Femminile",
     "Regione": "Emilia-Romagna",
     "Comitato": "Reggio Emilia",
-    "Squadre": 7,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1380,8 +1178,8 @@ const EMBEDDED_DATA = [
     "Disciplina": "Pallavolo",
     "categoria": "Open Misto",
     "Regione": "Emilia-Romagna",
-    "Comitato": "Reggio Emilia",
-    "Squadre": 26,
+    "Comitato": "REGIONALE",
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1390,7 +1188,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Friuli Venezia Giulia",
     "Comitato": "Pordenone",
-    "Squadre": 59,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1399,7 +1197,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Misto",
     "Regione": "Friuli Venezia Giulia",
     "Comitato": "Udine",
-    "Squadre": 38,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1408,7 +1206,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Lazio",
     "Comitato": "Cassino",
-    "Squadre": 29,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1417,7 +1215,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Lazio",
     "Comitato": "Cassino",
-    "Squadre": 10,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1426,25 +1224,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Femminile",
     "Regione": "Lazio",
     "Comitato": "Latina",
-    "Squadre": 5,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Pallavolo",
-    "categoria": "Open Maschile",
-    "Regione": "Lazio",
-    "Comitato": "Latina",
-    "Squadre": 5,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Pallavolo",
-    "categoria": "Open Misto",
-    "Regione": "Lazio",
-    "Comitato": "Latina",
-    "Squadre": 14,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1453,16 +1233,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open F",
     "Regione": "Lazio",
     "Comitato": "Roma",
-    "Squadre": 13,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Calcio a Cinque",
-    "categoria": "Open M",
-    "Regione": "Lazio",
-    "Comitato": "Roma",
-    "Squadre": 42,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1471,7 +1242,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Lazio",
     "Comitato": "Roma",
-    "Squadre": 32,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1480,25 +1251,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Femminile",
     "Regione": "Lazio",
     "Comitato": "Roma",
-    "Squadre": 14,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Pallavolo",
-    "categoria": "Open Maschile",
-    "Regione": "Lazio",
-    "Comitato": "Roma",
-    "Squadre": 13,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Pallavolo",
-    "categoria": "Open Misto",
-    "Regione": "Lazio",
-    "Comitato": "Roma",
-    "Squadre": 16,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1507,7 +1260,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Lazio",
     "Comitato": "Viterbo",
-    "Squadre": 8,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1516,7 +1269,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Liguria",
     "Comitato": "Chiavari",
-    "Squadre": 10,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1525,7 +1278,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Femminile",
     "Regione": "Liguria",
     "Comitato": "Chiavari",
-    "Squadre": 7,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1534,7 +1287,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Lombardia",
     "Comitato": "Bergamo",
-    "Squadre": 109,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1543,16 +1296,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open F",
     "Regione": "Lombardia",
     "Comitato": "Bergamo",
-    "Squadre": 7,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Calcio a Cinque",
-    "categoria": "Open M",
-    "Regione": "Lombardia",
-    "Comitato": "Bergamo",
-    "Squadre": 170,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1561,16 +1305,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open F",
     "Regione": "Lombardia",
     "Comitato": "Bergamo",
-    "Squadre": 10,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Calcio a Sette",
-    "categoria": "Open M",
-    "Regione": "Lombardia",
-    "Comitato": "Bergamo",
-    "Squadre": 386,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1579,7 +1314,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Lombardia",
     "Comitato": "Bergamo",
-    "Squadre": 79,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1588,16 +1323,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Femminile",
     "Regione": "Lombardia",
     "Comitato": "Bergamo",
-    "Squadre": 36,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Pallavolo",
-    "categoria": "Open Misto",
-    "Regione": "Lombardia",
-    "Comitato": "Bergamo",
-    "Squadre": 34,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1606,7 +1332,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Lombardia",
     "Comitato": "Brescia",
-    "Squadre": 12,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1615,16 +1341,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open F",
     "Regione": "Lombardia",
     "Comitato": "Brescia",
-    "Squadre": 37,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Calcio a Sette",
-    "categoria": "Open M",
-    "Regione": "Lombardia",
-    "Comitato": "Brescia",
-    "Squadre": 283,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1633,7 +1350,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Lombardia",
     "Comitato": "Brescia",
-    "Squadre": 52,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1642,7 +1359,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Femminile",
     "Regione": "Lombardia",
     "Comitato": "Brescia",
-    "Squadre": 30,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1651,7 +1368,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Lombardia",
     "Comitato": "Como",
-    "Squadre": 22,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1660,7 +1377,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Lombardia",
     "Comitato": "Como",
-    "Squadre": 106,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1669,16 +1386,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Femminile",
     "Regione": "Lombardia",
     "Comitato": "Como",
-    "Squadre": 11,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Pallavolo",
-    "categoria": "Open Misto",
-    "Regione": "Lombardia",
-    "Comitato": "Como",
-    "Squadre": 22,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1687,7 +1395,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Misto",
     "Regione": "Lombardia",
     "Comitato": "Crema",
-    "Squadre": 7,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1696,7 +1404,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Lombardia",
     "Comitato": "Cremona",
-    "Squadre": 27,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1705,7 +1413,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Lombardia",
     "Comitato": "Cremona",
-    "Squadre": 14,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1714,7 +1422,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Femminile",
     "Regione": "Lombardia",
     "Comitato": "Cremona",
-    "Squadre": 5,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1723,7 +1431,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Lombardia",
     "Comitato": "Lecco",
-    "Squadre": 12,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1732,7 +1440,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Lombardia",
     "Comitato": "Lecco",
-    "Squadre": 13,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1741,7 +1449,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Lombardia",
     "Comitato": "Lecco",
-    "Squadre": 105,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1750,7 +1458,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Lombardia",
     "Comitato": "Lecco",
-    "Squadre": 15,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1759,16 +1467,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Femminile",
     "Regione": "Lombardia",
     "Comitato": "Lecco",
-    "Squadre": 23,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Pallavolo",
-    "categoria": "Open Misto",
-    "Regione": "Lombardia",
-    "Comitato": "Lecco",
-    "Squadre": 19,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1777,7 +1476,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Lombardia",
     "Comitato": "Lodi",
-    "Squadre": 12,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1786,16 +1485,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Femminile",
     "Regione": "Lombardia",
     "Comitato": "Lodi",
-    "Squadre": 18,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Pallavolo",
-    "categoria": "Open Misto",
-    "Regione": "Lombardia",
-    "Comitato": "Lodi",
-    "Squadre": 15,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1804,7 +1494,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Lombardia",
     "Comitato": "Milano",
-    "Squadre": 17,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1813,16 +1503,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open F",
     "Regione": "Lombardia",
     "Comitato": "Milano",
-    "Squadre": 12,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Calcio a Sette",
-    "categoria": "Open M",
-    "Regione": "Lombardia",
-    "Comitato": "Milano",
-    "Squadre": 20,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1831,7 +1512,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Lombardia",
     "Comitato": "Milano",
-    "Squadre": 10,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1840,16 +1521,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Femminile",
     "Regione": "Lombardia",
     "Comitato": "Milano",
-    "Squadre": 16,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Pallavolo",
-    "categoria": "Open Misto",
-    "Regione": "Lombardia",
-    "Comitato": "Milano",
-    "Squadre": 16,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1858,7 +1530,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Lombardia",
     "Comitato": "Pavia",
-    "Squadre": 31,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1867,7 +1539,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Lombardia",
     "Comitato": "Pavia",
-    "Squadre": 17,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1876,7 +1548,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Lombardia",
     "Comitato": "Sondrio",
-    "Squadre": 32,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1885,7 +1557,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Misto",
     "Regione": "Lombardia",
     "Comitato": "Sondrio",
-    "Squadre": 10,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1894,7 +1566,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Lombardia",
     "Comitato": "Vallecamonica",
-    "Squadre": 7,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1903,7 +1575,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Femminile",
     "Regione": "Lombardia",
     "Comitato": "Vallecamonica",
-    "Squadre": 9,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1912,16 +1584,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open F",
     "Regione": "Lombardia",
     "Comitato": "Varese",
-    "Squadre": 19,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Calcio a Sette",
-    "categoria": "Open M",
-    "Regione": "Lombardia",
-    "Comitato": "Varese",
-    "Squadre": 189,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1930,7 +1593,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Marche",
     "Comitato": "Ascoli Piceno",
-    "Squadre": 12,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1939,7 +1602,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Marche",
     "Comitato": "Fermo",
-    "Squadre": 16,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1948,16 +1611,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open F",
     "Regione": "Marche",
     "Comitato": "Macerata",
-    "Squadre": 5,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Calcio a Cinque",
-    "categoria": "Open M",
-    "Regione": "Marche",
-    "Comitato": "Macerata",
-    "Squadre": 24,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1966,7 +1620,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Marche",
     "Comitato": "Macerata",
-    "Squadre": 6,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1975,16 +1629,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Femminile",
     "Regione": "Marche",
     "Comitato": "Macerata",
-    "Squadre": 5,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Pallavolo",
-    "categoria": "Open Misto",
-    "Regione": "Marche",
-    "Comitato": "Macerata",
-    "Squadre": 9,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -1993,7 +1638,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Marche",
     "Comitato": "Pesaro-Urbino",
-    "Squadre": 39,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2002,7 +1647,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Marche",
     "Comitato": "Pesaro-Urbino",
-    "Squadre": 29,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2011,7 +1656,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Misto",
     "Regione": "Marche",
     "Comitato": "Pesaro-Urbino",
-    "Squadre": 6,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2020,7 +1665,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open",
     "Regione": "Nazionale",
     "Comitato": "CSI P.N.",
-    "Squadre": 7,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2029,7 +1674,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Piemonte",
     "Comitato": "Alba",
-    "Squadre": 8,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2038,7 +1683,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Piemonte",
     "Comitato": "Alba",
-    "Squadre": 22,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2047,16 +1692,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Femminile",
     "Regione": "Piemonte",
     "Comitato": "Alba",
-    "Squadre": 5,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Pallavolo",
-    "categoria": "Open Misto",
-    "Regione": "Piemonte",
-    "Comitato": "Alba",
-    "Squadre": 5,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2065,7 +1701,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Piemonte",
     "Comitato": "Asti",
-    "Squadre": 14,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2074,25 +1710,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Femminile",
     "Regione": "Piemonte",
     "Comitato": "Biella",
-    "Squadre": 9,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Pallavolo",
-    "categoria": "Open Maschile",
-    "Regione": "Piemonte",
-    "Comitato": "Biella",
-    "Squadre": 5,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Pallavolo",
-    "categoria": "Open Misto",
-    "Regione": "Piemonte",
-    "Comitato": "Biella",
-    "Squadre": 5,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2101,7 +1719,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Piemonte",
     "Comitato": "Cuneo",
-    "Squadre": 15,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2110,7 +1728,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Piemonte",
     "Comitato": "Cuneo",
-    "Squadre": 16,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2119,7 +1737,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Piemonte",
     "Comitato": "Cuneo",
-    "Squadre": 8,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2128,7 +1746,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Piemonte",
     "Comitato": "Cuneo",
-    "Squadre": 17,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2137,25 +1755,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Femminile",
     "Regione": "Piemonte",
     "Comitato": "Cuneo",
-    "Squadre": 15,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Pallavolo",
-    "categoria": "Open Maschile",
-    "Regione": "Piemonte",
-    "Comitato": "Cuneo",
-    "Squadre": 5,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Pallavolo",
-    "categoria": "Open Misto",
-    "Regione": "Piemonte",
-    "Comitato": "Cuneo",
-    "Squadre": 23,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2164,7 +1764,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Piemonte",
     "Comitato": "Novara",
-    "Squadre": 18,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2173,7 +1773,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Piemonte",
     "Comitato": "Novara",
-    "Squadre": 8,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2182,7 +1782,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Misto",
     "Regione": "Piemonte",
     "Comitato": "Novara",
-    "Squadre": 12,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2191,7 +1791,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Piemonte",
     "Comitato": "Subalpino",
-    "Squadre": 50,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2200,7 +1800,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Piemonte",
     "Comitato": "Subalpino",
-    "Squadre": 8,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2209,16 +1809,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open F",
     "Regione": "Piemonte",
     "Comitato": "Subalpino",
-    "Squadre": 8,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Pallacanestro",
-    "categoria": "Open M",
-    "Regione": "Piemonte",
-    "Comitato": "Subalpino",
-    "Squadre": 19,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2227,7 +1818,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Piemonte",
     "Comitato": "Verbania",
-    "Squadre": 44,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2236,7 +1827,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Femminile",
     "Regione": "Piemonte",
     "Comitato": "Verbania",
-    "Squadre": 5,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2245,7 +1836,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Piemonte",
     "Comitato": "Vercelli",
-    "Squadre": 22,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2254,7 +1845,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Puglia",
     "Comitato": "Brindisi",
-    "Squadre": 7,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2263,16 +1854,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Femminile",
     "Regione": "Puglia",
     "Comitato": "Brindisi",
-    "Squadre": 7,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Pallavolo",
-    "categoria": "Open Misto",
-    "Regione": "Puglia",
-    "Comitato": "Brindisi",
-    "Squadre": 8,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2281,16 +1863,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open F",
     "Regione": "Puglia",
     "Comitato": "Lecce",
-    "Squadre": 0,
-    "NOTE": "Non soddisfa il C.U."
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Calcio a Cinque",
-    "categoria": "Open M",
-    "Regione": "Puglia",
-    "Comitato": "Lecce",
-    "Squadre": 19,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2299,7 +1872,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Puglia",
     "Comitato": "Lecce",
-    "Squadre": 8,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2308,7 +1881,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Misto",
     "Regione": "Puglia",
     "Comitato": "Lecce",
-    "Squadre": 7,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2317,7 +1890,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Puglia",
     "Comitato": "Ostuni",
-    "Squadre": 10,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2326,7 +1899,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Puglia",
     "Comitato": "Ostuni",
-    "Squadre": 12,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2335,7 +1908,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Sardegna",
     "Comitato": "Oristano",
-    "Squadre": 10,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2344,7 +1917,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Sardegna",
     "Comitato": "Sassari",
-    "Squadre": 16,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2353,7 +1926,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Sardegna",
     "Comitato": "Sassari",
-    "Squadre": 16,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2362,7 +1935,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Sicilia",
     "Comitato": "Acireale",
-    "Squadre": 8,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2371,7 +1944,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Sicilia",
     "Comitato": "Acireale",
-    "Squadre": 9,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2380,7 +1953,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Misto",
     "Regione": "Sicilia",
     "Comitato": "Acireale",
-    "Squadre": 6,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2389,25 +1962,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Femminile",
     "Regione": "Sicilia",
     "Comitato": "Catania",
-    "Squadre": 8,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Pallavolo",
-    "categoria": "Open Maschile",
-    "Regione": "Sicilia",
-    "Comitato": "Catania",
-    "Squadre": 6,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Pallavolo",
-    "categoria": "Open Misto",
-    "Regione": "Sicilia",
-    "Comitato": "Catania",
-    "Squadre": 11,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2416,16 +1971,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Femminile",
     "Regione": "Sicilia",
     "Comitato": "Enna",
-    "Squadre": 5,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Pallavolo",
-    "categoria": "Open Misto",
-    "Regione": "Sicilia",
-    "Comitato": "Enna",
-    "Squadre": 5,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2434,7 +1980,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open F",
     "Regione": "Sicilia",
     "Comitato": "Messina",
-    "Squadre": 6,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2443,7 +1989,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Sicilia",
     "Comitato": "Palermo",
-    "Squadre": 6,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2452,25 +1998,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Femminile",
     "Regione": "Sicilia",
     "Comitato": "Palermo",
-    "Squadre": 12,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Pallavolo",
-    "categoria": "Open Maschile",
-    "Regione": "Sicilia",
-    "Comitato": "Palermo",
-    "Squadre": 10,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Pallavolo",
-    "categoria": "Open Misto",
-    "Regione": "Sicilia",
-    "Comitato": "Palermo",
-    "Squadre": 18,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2479,7 +2007,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Sicilia",
     "Comitato": "Siracusa",
-    "Squadre": 6,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2488,25 +2016,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Femminile",
     "Regione": "Sicilia",
     "Comitato": "Siracusa",
-    "Squadre": 6,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Pallavolo",
-    "categoria": "Open Maschile",
-    "Regione": "Sicilia",
-    "Comitato": "Siracusa",
-    "Squadre": 9,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Pallavolo",
-    "categoria": "Open Misto",
-    "Regione": "Sicilia",
-    "Comitato": "Siracusa",
-    "Squadre": 7,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2515,7 +2025,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Toscana",
     "Comitato": "Firenze",
-    "Squadre": 25,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2524,7 +2034,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Misto",
     "Regione": "Toscana",
     "Comitato": "Lucca",
-    "Squadre": 12,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2532,8 +2042,8 @@ const EMBEDDED_DATA = [
     "Disciplina": "Pallavolo",
     "categoria": "Open Misto",
     "Regione": "Toscana",
-    "Comitato": "Toscana",
-    "Squadre": 4,
+    "Comitato": "REGIONALE",
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2542,7 +2052,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Umbria",
     "Comitato": "Foligno",
-    "Squadre": 6,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2551,7 +2061,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Umbria",
     "Comitato": "Gubbio",
-    "Squadre": 6,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2560,7 +2070,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Misto",
     "Regione": "Umbria",
     "Comitato": "Gubbio",
-    "Squadre": 10,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2569,16 +2079,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open F",
     "Regione": "Umbria",
     "Comitato": "Perugia",
-    "Squadre": 25,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Calcio a Cinque",
-    "categoria": "Open M",
-    "Regione": "Umbria",
-    "Comitato": "Perugia",
-    "Squadre": 15,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2587,7 +2088,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Umbria",
     "Comitato": "Perugia",
-    "Squadre": 21,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2596,16 +2097,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Femminile",
     "Regione": "Umbria",
     "Comitato": "Perugia",
-    "Squadre": 5,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Pallavolo",
-    "categoria": "Open Misto",
-    "Regione": "Umbria",
-    "Comitato": "Perugia",
-    "Squadre": 7,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2614,7 +2106,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Umbria",
     "Comitato": "Terni",
-    "Squadre": 28,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2623,7 +2115,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Umbria",
     "Comitato": "Terni",
-    "Squadre": 42,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2632,7 +2124,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Veneto",
     "Comitato": "Belluno",
-    "Squadre": 13,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2641,7 +2133,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Veneto",
     "Comitato": "Legnago",
-    "Squadre": 12,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2650,7 +2142,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Veneto",
     "Comitato": "Padova",
-    "Squadre": 140,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2659,7 +2151,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Veneto",
     "Comitato": "Padova",
-    "Squadre": 16,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2668,7 +2160,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open F",
     "Regione": "Veneto",
     "Comitato": "Padova",
-    "Squadre": 5,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2677,7 +2169,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Misto",
     "Regione": "Veneto",
     "Comitato": "Rovigo",
-    "Squadre": 6,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2686,7 +2178,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Veneto",
     "Comitato": "Treviso",
-    "Squadre": 25,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2695,16 +2187,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Femminile",
     "Regione": "Veneto",
     "Comitato": "Treviso",
-    "Squadre": 7,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Pallavolo",
-    "categoria": "Open Misto",
-    "Regione": "Veneto",
-    "Comitato": "Treviso",
-    "Squadre": 27,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2713,7 +2196,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Veneto",
     "Comitato": "Venezia",
-    "Squadre": 24,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2722,7 +2205,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Veneto",
     "Comitato": "Venezia",
-    "Squadre": 20,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2731,7 +2214,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Veneto",
     "Comitato": "Verona",
-    "Squadre": 96,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2740,16 +2223,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open F",
     "Regione": "Veneto",
     "Comitato": "Verona",
-    "Squadre": 20,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Calcio a Cinque",
-    "categoria": "Open M",
-    "Regione": "Veneto",
-    "Comitato": "Verona",
-    "Squadre": 228,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2758,7 +2232,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Veneto",
     "Comitato": "Verona",
-    "Squadre": 30,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2767,7 +2241,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open M",
     "Regione": "Veneto",
     "Comitato": "Verona",
-    "Squadre": 73,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2776,16 +2250,7 @@ const EMBEDDED_DATA = [
     "categoria": "Open Femminile",
     "Regione": "Veneto",
     "Comitato": "Verona",
-    "Squadre": 14,
-    "NOTE": "(vuoto)"
-  },
-  {
-    "status": "Soddisfa C.U.",
-    "Disciplina": "Pallavolo",
-    "categoria": "Open Misto",
-    "Regione": "Veneto",
-    "Comitato": "Verona",
-    "Squadre": 27,
+    "Squadre": null,
     "NOTE": "(vuoto)"
   },
   {
@@ -2983,7 +2448,6 @@ function updateKPIs(){
   // Badge tabs
   document.getElementById('countOk').textContent = ok.length;
   document.getElementById('countNomin').textContent = nomin.length;
-  document.getElementById('countNonprev').textContent = nonprev.length;
 }
 
 function refreshAll(){
@@ -3163,7 +2627,6 @@ document.getElementById('tabBar').addEventListener('click', function(e){
   const tableMap = {
   'pane-ok':'ok',
   'pane-nomin':'nomin',
-  'pane-nonprev':'nonprev',
   'pane-all': null
 };
 
@@ -3250,8 +2713,7 @@ tables.nonprev_all = makeTable('#table-nonprev-all', STATUS.NONPREV, [
     const regione = $('#printRegione').val();
     if(!regione) return;
     const include2 = document.getElementById('printInclude2')?.checked ?? true;
-    const include3 = document.getElementById('printInclude3')?.checked ?? true;
-    const htmlDoc = buildPrintHtml(regione, include2, include3);
+const htmlDoc = buildPrintHtml(regione, include2);
     const w = window.open('', '_blank');
     if(!w){
       alert('Popup bloccato dal browser: abilita i popup per poter stampare.');
@@ -3300,7 +2762,7 @@ function buildTableHtml(rows, withNote){
   }).join('');
   return '<table><thead>' + thead + '</thead><tbody>' + tbody + '</tbody></table>';
 }
-function buildPrintHtml(regione, include2, include3){
+function buildPrintHtml(regione, include2){
   const reg = Array.isArray(regione) ? regione[0] : regione;
   const title = (document.title || 'Campionati') + ' – Regione: ' + reg;
   const ok = raw.filter(r => r.status === STATUS.OK && r.Regione === reg);
